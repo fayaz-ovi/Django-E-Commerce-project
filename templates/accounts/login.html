@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-conten padding-y" style="min-height:84vh">
+
+<!-- ============================ COMPONENT LOGIN   ================================= -->
+	<div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
+      <div class="card-body">
+      <h4 class="card-title mb-4">Sign in</h4>
+      {% if messages %}
+		  {% for message in messages %}
+		    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+		      {{ message }}
+		      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		        <span aria-hidden="true">&times;</span>
+		      </button>
+		    </div>
+		  {% endfor %}
+		{% endif %}
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+          <div class="form-group">
+			 <input type="email" class="form-control" placeholder="Email Address" name="email" >
+          </div> <!-- form-group// -->
+          <div class="form-group">
+			<input type="password" class="form-control" placeholder="Password" name="password" >
+          </div> <!-- form-group// -->
+          
+          <div class="form-group">
+          	<a href="#" class="float-right">Forgot password?</a> 
+           
+          </div> <!-- form-group form-check .// -->
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+          </div> <!-- form-group// -->    
+      </form>
+      <p class="text-center mt-4">Don't have account? <a href="{% url 'register' %}">Sign up</a></p>
+      </div> <!-- card-body.// -->
+    </div> <!-- card .// -->
+
+<!-- ============================ COMPONENT LOGIN  END.// ================================= -->
+
+
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+{% endblock %}

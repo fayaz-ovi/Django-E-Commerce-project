@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-conten padding-y bg">
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="container">
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+
+<div class="container" style="min-height:60vh">
+	<div class="row">
+	<aside class="col-md-3">
+		<!--   SIDEBAR   -->
+		<ul class="list-group">
+			<a class="list-group-item active" href="{% url 'dashboard' %}"> Dashboard </a>
+			<a class="list-group-item" href="#"> My Orders </a>
+			<a class="list-group-item" href="#"> Edit Profile </a>
+			<a class="list-group-item" href="#"> Change Password </a>
+		</ul>
+		<br>
+		<a class="btn btn-light btn-block" href="{% url 'logout' %}"> <i class="fa fa-power-off"></i> <span class="text">Log out</span> </a> 
+		<!--   SIDEBAR .//END   -->
+	</aside>
+	<main class="col-md-9">
+		<article class="card">
+		<header class="card-header">
+			<strong class="d-inline-block mr-3">Welcome {{ user.first_name }}!</strong>
+		</header>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-12">
+					<p>You are successfully logged in to your account.</p>
+					<p>You can view your orders, manage your profile, and much more from this dashboard.</p>
+				</div>
+			</div> <!-- row.// -->
+		</div> <!-- card-body .// -->
+		</article> <!-- order-group.// --> 
+	</main>
+</div> <!-- row.// -->
+</div>
+
+
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+{% endblock %}
