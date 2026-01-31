@@ -1,0 +1,18 @@
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\hline
+\textbf{Django E-Commerce Platform} & \textit{Personal Learning Project} \\
+\hline
+\end{tabularx}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item Developed a full-stack e-commerce web application with product catalog, shopping cart, user authentication, and order management system using Django framework
+    \item Implemented advanced cart functionality with localStorage persistence, real-time stock validation, automatic cart consolidation, and session-to-user cart merging for seamless user experience
+    \item Designed relational database schema with custom models for cart tracking, product variations, and order history using Django ORM with automatic migrations
+    \item Built custom admin interface with inline editing, bulk actions, and inventory management dashboard for efficient product and order administration
+    \item Integrated context processors for global cart counter, custom template tags for dynamic content, and management commands for data consolidation
+    \item \textbf{Tech Stack:} Python, Django 3.1, SQLite, JavaScript, Bootstrap 4, jQuery, Git
+    \item \href{https://github.com/fayazbinfaruk-coder/Django-E-Commerce-project}{GitHub Repository}
+\end{itemize}
+
+\vspace{0.2cm}

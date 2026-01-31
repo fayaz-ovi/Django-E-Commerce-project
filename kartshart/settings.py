@@ -25,7 +25,7 @@ SECRET_KEY = '0a6&f5zzyzqp+v$=umu$b0319muoy@$*#j-7_+jm@#t5p10d0+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -127,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
 STATICFILES_DIRS = [
     BASE_DIR / 'kartshart' / 'static',
 ]
